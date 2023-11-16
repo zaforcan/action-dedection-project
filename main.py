@@ -107,8 +107,7 @@ def save_frame_as_png(video_path, output_folder):
                         milliseconds = round((seconds - int(seconds)) * 1000)
                         time_format = str(datetime.timedelta(seconds=int(seconds), milliseconds=milliseconds))
                         csv_writer.writerow([time_format, frame_name, label])
-                        print(time_format, frame_name, "ekran görüntüsü kaydedildi")
-     
+                        print(time_format, frame_name, "ekran görüntüsü kaydedildi")     
 
                     else:
                         label = "unknown"  
@@ -145,22 +144,6 @@ if __name__ == "__main__":
 
     import tensorflow as tf
     new_model = tf.keras.models.load_model('datacollection/my_model')
-
-    # loaded_model = tf.saved_model.load("datacollection/my_model", tags=None, options=None)
     print("tensorflow modeli yüklendi")
-
-    # Yeni verileriniz (örneğin, vücut açıları ölçüleri)
-    # new_data = np.array([[170,	190, 40,	165,	148,	165]])  # Örnek açı verileri
-
-# Modelin yeni verilere göre tahminlerini alın
-    # predictions = new_model.predict(new_data)
-
-# Tahminler üzerinde değerlendirme yapabilirsiniz
-# Örneğin, tahminlerin sınıflarını (idle veya shot) alabilirsiniz
-    # predicted_classes = np.argmax(predictions, axis=1)
-
-# Tahmin edilen sınıfları ve olasılıkları gösterelim (örnek olarak)
-    # print("Tahmin Edilen Sınıflar:", predicted_classes)
-    # print("Tahmin Edilen Olasılıklar:", predictions)
-
+    
     save_frame_as_png(video_path, output_folder)
