@@ -20,6 +20,9 @@ eğer "shot" sınıfına ait bir frame varsa:  hem ekran görüntüsü kaydedili
 
 csv dosyası result klasöründe "frames_info.csv" ismiyle kaydediliyor
 
+Not: Uygulama %100 çalışmıyor, test aşamasında bir projedir. 
+opencv kütüphanesi ile frame'lerin her defasında model ile analiz edilmesi sistemin cok fazla ram tüketmesine neden oluyor.
+
 
 
 
